@@ -27,8 +27,8 @@ https://www.youtube.com/watch?v=rX6YoU1oB2w
 * Developed and tested with `MHI2_ER_AU37x_P5089`
 
 ## Most important commands
-* `ssh root@10.173.189.1` - connect with MIB2 at 10.173.189.1 IP address (WLAN hotspot)
-* `ssh root@x.x.x.x` - connect with MIB2 at x.x.x.x IP address (D-Link Ethernet-to-USB adapter)
+* `ssh -oHostKeyAlgorithms=+ssh-rsa -oMACs=hmac-sha1 root@172.16.250.248` - connect with MIB2 at 172.16.250.248 IP address (D-Link Ethernet-to-USB adapter)
+* `ssh -oHostKeyAlgorithms=+ssh-rsa -oMACs=hmac-sha1 root@10.173.189.1` - connect with MIB2 at 10.173.189.1 IP address (WLAN hotspot)
 * `4SapmKoq` - root password for MU1326
 * `mount -uw /net/mmx/mnt/app && mount -uw /net/mmx/mnt/system` - enable write filesystem
 * `mount -ur /net/mmx/mnt/app && mount -ur /net/mmx/mnt/system` - go back to read-only filesystem
