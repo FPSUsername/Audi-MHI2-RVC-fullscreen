@@ -35,7 +35,9 @@ https://www.youtube.com/watch?v=rX6YoU1oB2w
 
 #### Copy files from computer - WLAN hotspot (Terminal 2)
 * `cd /location/to/Audi-MHI2-RVC-fullscreen/MH*/modification `
-* `scp -oHostKeyAlgorithms=+ssh-rsa -oMACs=hmac-sha1 -O .\displaymanager.json root@10.173.189.1:/mnt/system/etc/eso/production/` - Copy displaymanager.json
+* A. `scp -oHostKeyAlgorithms=+ssh-rsa -oMACs=hmac-sha1 -O .\displaymanager_8V0827566.json root@10.173.189.1:/mnt/system/etc/eso/production/displaymanager.json` - Copy displaymanager_8V0827566.json for A3 8V camera with 5Q0907441(A) module (pre facelift)
+* B. `scp -oHostKeyAlgorithms=+ssh-rsa -oMACs=hmac-sha1 -O .\displaymanager_8V0827566AB.json root@10.173.189.1:/mnt/system/etc/eso/production/displaymanager.json` - Copy displaymanager_8V0827566AB.json for A3 8V camera without additional module (facelift)
+* C. `scp -oHostKeyAlgorithms=+ssh-rsa -oMACs=hmac-sha1 -O .\displaymanager.json root@10.173.189.1:/mnt/system/etc/eso/production/` - Copy displaymanager_8V0827566AB.json for camera without additional module
 * `scp -oHostKeyAlgorithms=+ssh-rsa -oMACs=hmac-sha1 -O *.png root@10.173.189.1:/mnt/app/eso/hmi/lsd/images/HMIEarlyAppsEvoHighScale/` - Copy all png files
 * `scp -oHostKeyAlgorithms=+ssh-rsa -oMACs=hmac-sha1 -O OPS_*.kzb root@10.173.189.1:/mnt/app/eso/hmi/lsd/kzbs/HMISystemEvoHighScale/` - Copy all kzb files
 
